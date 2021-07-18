@@ -1,59 +1,123 @@
 
-// deel 1
+// DEEL 1
 
-const age = 25;
-
-if ( age >= 18) {
-    document.write("Je mag naar binnen in de kroeg.");
-
-} else {
-    document.write("Je bent te jong. Je mag helaas niet naar binnen.");
-}
-
-if ( age >= 18 && age <= 25) {
-    document.write("Je bent tussen de 18 - 25 jaar. Je krijgt 50% korting!");
- }
-
-
-// deel 2
-
-const isFemale = "male";
-
-if ( isFemale === "female") {
-    document.write(true);
-
-} else {
-    document.write(false);
-}
-
-const firstName = "Jennifer";
-
-if ( firstName === "Sarah" || firstName === "Bram") {
-    document.write("Je heet Sarah of Bram, je krijgt gratis bier!");
-} else {
-    document.write("Je heet geen Sarah of Bram. Helaas, je krijg geen gratis bier.");
-}
+  
+const person = {
+    name: "Jennifer",
+    age: 42,
+    evaluations: [7, 10, 9],
+  };
+  
+  // entire object
+  console.log(person);
+  
+  // dot notation
+  console.log(person.name);
+  console.log(person.age);
+  
+  // bracket notation
+  console.log(person["name"]);
+  console.log(person["age"]);
+  
+  // extra key-value pair
+  console.log(person.evaluations);
 
 
-// deel 3
-const driverStatus = "bob";
+  //DEEL 2
+  const myArray = ["groen", "blauw", "rood"];
+console.log(myArray);
+console.log(myArray.length);
 
-if ( driverStatus === "bob") {
-    document.write("Je mag rijden.");
+// first element
+console.log(myArray[0]);
 
-} else {
-    document.write("Je mag niet rijden.");
-}
+// last element
+console.log(myArray[myArray.length - 1]);
 
-const totalAmount = 25;
+// adding elements
+myArray.push("geel");
+console.log(myArray);
+myArray.push(5);
+console.log(myArray);
 
-if ( totalAmount >= 100) {
-    document.write("Je hebt voor 100 euro of meer besteld. Je krijft een gratis flesje champagne!");
-} else if ( totalAmount >= 50) {
-    document.write("Je hebt voor meer dan 50 euro besteld. Je krijgt een gratis portie nachos!");
-} else if ( totalAmount >= 25) {
-    document.write("Je hebt voor meer dan 25 euro besteld. Je krijgt gratis (vega)bitterballen!");
-} else {
-    document.write("Je hebt voor minder dan 25 euro besteld. Je krijgt helaas geen korting.");
-}
+// adding an object
+myArray.push({ greeting: "Hi ik ben een object" });
+console.log(myArray);
 
+// only the last greeting
+console.log(myArray[myArray.length - 1].greeting);
+
+//DEEL 3
+
+const catBreeds = [
+    {
+      name: "Abyssinian",
+      description:
+        "The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.",
+      dog_friendly: 4,
+      energy_level: 5,
+      life_span: "14 - 15",
+      origin: "Egypt",
+      temperament: [
+        "Active",
+        "Energetic",
+        "Independent",
+        "Intelligent",
+        "Gentle",
+      ],
+      wikipedia_url: "https://en.wikipedia.org/wiki/Abyssinian_(cat)",
+      food: {
+        favourite_food: "fish",
+        medium_liked_food: "dried fruits",
+        disliked_food: "walnuts",
+      },
+    },
+    {
+      name: "Aegean",
+      description:
+        "Native to the Greek islands known as the Cyclades in the Aegean Sea, these are natural cats, meaning they developed without humans getting involved in their breeding. As a breed, Aegean Cats are rare, although they are numerous on their home islands. They are generally friendly toward people and can be excellent cats for families with children.",
+      dog_friendly: 4,
+      energy_level: 53,
+      life_span: "9- 12",
+      origin: "Greece",
+      temperament: ["Affectionate", "Social", "Intelligent", "Playful", "Active"],
+      wikipedia_url: "https://en.wikipedia.org/wiki/Aegean_cat",
+      food: {
+        favourite_food: "tuna",
+        medium_liked_food: "canned food",
+        disliked_food: "all fruits",
+      },
+    },
+    {
+      name: "American Bobtail",
+      description:
+        "American Bobtails are loving and incredibly intelligent cats possessing a distinctive wild appearance. They are extremely interactive cats that bond with their human family with great devotion.",
+      dog_friendly: 5,
+      energy_level: 3,
+      life_span: "11 - 15",
+      origin: "United States",
+      temperament: [
+        "Intelligent",
+        "Interactive",
+        "Lively",
+        "Playful",
+        "Sensitive",
+      ],
+      wikipedia_url: "https://en.wikipedia.org/wiki/American_Bobtail",
+      food: {
+        favourite_food: "meaty things",
+        medium_liked_food: "tuna",
+        disliked_food: "canned food",
+      },
+    },
+  ];
+  
+  console.log("Naam kattensoort 3:", catBreeds[2].name);
+  console.log("Energylevel kattensoort 1:", catBreeds[0].energy_level);
+  console.log("Eerste temperament kat 2:", catBreeds[1].temperament[0]);
+  const lengthTemperamentsCatThree = catBreeds[2].temperament.length;
+  console.log(
+    "Laatste temperament kat 3:",
+    catBreeds[2].temperament[lengthTemperamentsCatThree - 1]
+  );
+  console.log("Favo voedsel van kat 3:", catBreeds[2].food.favourite_food);
