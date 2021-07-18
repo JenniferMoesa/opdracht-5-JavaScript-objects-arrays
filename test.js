@@ -1,17 +1,16 @@
 
-// DEEL 1
+// PART 1
 
-  
 const person = {
     name: "Jennifer",
     age: 42,
     evaluations: [7, 10, 9],
   };
   
-  // entire object
+  // 3. Gebruik console.log(person) en run je JavaScript programma, om je object te loggen.
   console.log(person);
   
-  // dot notation
+  // Gebruik de dot-notation en de bracket-notation voor het loggen van de bovenstaande 2 properties
   console.log(person.name);
   console.log(person.age);
   
@@ -19,35 +18,35 @@ const person = {
   console.log(person["name"]);
   console.log(person["age"]);
   
-  // extra key-value pair
+  // 8. Log alleen de property evaluations .
   console.log(person.evaluations);
 
 
-  //DEEL 2
-  const myArray = ["groen", "blauw", "rood"];
-console.log(myArray);
-console.log(myArray.length);
+  //PART 2
+  const colorsArray = ["pink", "black", "purple"];
+console.log(colorsArray);
+console.log(colorsArray.length);
 
 // first element
-console.log(myArray[0]);
+console.log(colorsArray[0]);
 
 // last element
-console.log(myArray[myArray.length - 1]);
+console.log(colorsArray[colorsArray.length - 1]);
 
 // adding elements
-myArray.push("geel");
-console.log(myArray);
-myArray.push(5);
-console.log(myArray);
+colorsArray.push("geel");
+console.log(colorsArray);
+colorsArray.push(5);
+console.log(colorsArray);
 
 // adding an object
-myArray.push({ greeting: "Hi ik ben een object" });
-console.log(myArray);
+colorsArray.push({ greeting: "Hi, I am an object" });
+console.log(colorsArray);
 
 // only the last greeting
-console.log(myArray[myArray.length - 1].greeting);
+console.log(colorsArray[colorsArray.length - 1].greeting);
 
-//DEEL 3
+//PART 3
 
 const catBreeds = [
     {
